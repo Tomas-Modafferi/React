@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.logo1{
+  height: 40px;
+  width: 40px;
+}
+nav{
+  width: 100%;
+}
+nav ul{
+  align-items: row;
+}
+nav ul li{
+  list-style: none;
+  display: inline;
+  justify-content: space-between;
+  justify-content: end;
+  padding: 25px;
+}
+.itemList{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+}
