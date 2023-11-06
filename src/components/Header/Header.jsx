@@ -1,9 +1,10 @@
-import NavBar from "C:/Users/totom/app-react/src/components/navBar/navBar.jsx"
+import MenuAppBar from "../navBar/navBar";
+
 const Header = () => {
   return (
     <div className="Header">
         <div className="navbar">
-            <NavBar/>
+            <MenuAppBar/>
         </div>
 
     </div>   
