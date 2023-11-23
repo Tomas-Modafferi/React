@@ -7,6 +7,7 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
+import {Link} from 'react-router-dom'
 
 const MenuListComposition = () => {
   const [open, setOpen] = React.useState(false);
@@ -14,6 +15,23 @@ const MenuListComposition = () => {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
+  };
+  const styles = {
+    popUpBtn: {
+      textDecoration: "none",
+      color: "white",
+      fontSize: 18,
+      fontWeight: "bold",
+      textTransform: "lowercase",
+    },
+    upperText: {
+      textTransform: "uppercase",
+    },
+    link: {
+      color: "black",
+      fontSize: 18,
+      textDecoration: "none",
+    },
   };
 
   const handleClose = (event) => {
@@ -83,11 +101,31 @@ const MenuListComposition = () => {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>Carreras</MenuItem>
-                    <MenuItem onClick={handleClose}>Shooter</MenuItem>
-                    <MenuItem onClick={handleClose}>Deportes</MenuItem>
-                    <MenuItem onClick={handleClose}>Lucha</MenuItem>
-                    <MenuItem onClick={handleClose}>Aventuras</MenuItem>
+                    <MenuItem>
+                      <Link style= {styles.link} to= "item-categoria/Carreras">
+                        Carreras
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link style= {styles.link} to= "item-categoria/Aventuras">
+                        Aventuras
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link style= {styles.link} to= "item-categoria/Deportes">
+                        Deportes
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link style= {styles.link} to= "item-categoria/Shooter">
+                        Shooter
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link style= {styles.link} to= "item-categoria/Lucha"> 
+                        Lucha
+                      </Link>
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

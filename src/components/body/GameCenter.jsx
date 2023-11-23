@@ -15,7 +15,7 @@ const GameCenter = () => {
         <div className="grid">
           {items.map((item) => {
             return(
-              <Link to={`detail/${item.id}`} key={item.id}>
+              <Link to={`detail/${item.id}`} key={item.id} style={{textDecoration:"none"}}>
                 <CardItem item={item}/>
               </Link>
             )

@@ -4,12 +4,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Carrito from "./CartWidget"
 import Contacto from '../body/Contacto';
-import { CameraFrontSharp } from '@mui/icons-material';
 import {Link} from 'react-router-dom'
-import About from '../body/About';
 import MenuListComposition from './DropDownMenu';
 
 

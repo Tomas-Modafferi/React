@@ -12,6 +12,7 @@ import Contacto from "./components/body/Contacto";
 import About from "./components/body/About";
 import imagenLogo from './assets/img/loggo2.png'
 import ItemDetailContainer from "./components/ItemListContainer/ItemDetailContainer";
+import CategoriaItem from "./components/CategoriaItem";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path= "contacto" element={<Contacto />}/>
         <Route path= "/about" element={<About />}/>
         <Route path= "/detail/:id" element={<ItemDetailContainer/>}/>
+        <Route path= "/item-categoria/:categoria" element={<CategoriaItem/>}/>
        </Routes>
     </BrowserRouter>
     </>
