@@ -6,6 +6,11 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Carrito from "./CartWidget"
+import Contacto from '../body/Contacto';
+import { CameraFrontSharp } from '@mui/icons-material';
+import {Link} from 'react-router-dom'
+import About from '../body/About';
+import MenuListComposition from './DropDownMenu';
 
 
 export default function MenuAppBar() {
@@ -15,34 +20,40 @@ export default function MenuAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            New Collection
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            About Us
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            NewsTeller
-          </Typography>
-          {auth && (
-            <div> 
-              <Carrito/>
-            </div>
-          )}
-        </Toolbar>
-      </AppBar>
-    </Box>
+  <AppBar position="static" sx={{ backgroundColor: 'black' }}> {/* Establece el fondo negro */}
+    <Toolbar>
+      <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 2 }}
+      />
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}> 
+        <Link to="/" className='contacto'>
+          Home
+        </Link>
+        </Typography>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
+          <Link to="/about" className='contacto'>
+            Sobre Nosotros
+          </Link>
+        </Typography>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
+        <Link to ="/contacto" className='contacto' >
+        Contacto
+        </Link>
+      </Typography>
+      <MenuListComposition />
+      {auth && (
+        <div> 
+          <Carrito/>
+        </div>
+      )}
+    </Toolbar>
+  </AppBar>
+</Box>
+
   );
 }
 

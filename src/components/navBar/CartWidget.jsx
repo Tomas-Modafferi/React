@@ -1,9 +1,17 @@
+import React, {useState} from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-const Carrito = () =>{
+const Carrito = ({items}) =>{
+    const [carrito, setCarrito] = useState([]);
+
+    const handleAgregarAlCarrito = () => {
+        const nuevoCarrito = [...carrito, items];
+        setCarrito(nuevoCarrito);
+    }
+    
     return(
         <div>
         <ShoppingBasketIcon/>
-        <span>0</span>
+        {Carrito.length}
         </div>
     )
 }
